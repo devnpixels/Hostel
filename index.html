@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <nav class="head_nav">
+      <h1>dp <i class="material-symbols-outlined">atr</i></h1>
+      <div>
+        <a href="login.html">Login <span></span></a>
+        <a href="register.html">Register <span></span></a>
+        <a href="add_hostel.html" id="add">+ add a hostel <span></span></a>
+      </div>
+      <button type="button" class="material-symbols-outlined" id="head_nav_tag">navigate_next</button>
+    </nav>
+    <section class="head_box">
+      <div class="head_box_swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(images/room11.jpg);">
+            <div>
+              <strong>Deluxe DevPixel Room</strong>
+              <p>
+                <span><i class="material-symbols-outlined">star</i>Delivery service</span>
+                <span><i class="material-symbols-outlined">star</i>Fridge</span>
+                <span><i class="material-symbols-outlined">star</i>Tv | <a href="">Read More...</a></span>
+              </p>
+              <a>
+                <span>Ghc 4,500 <i class="material-symbols-outlined">near_me</i></span>
+                <small>2 in a room</small>
+              </a>
+              <nav>
+                <button class="head_box_swiper_prev material-symbols-outlined">west</button>
+                <button class="head_box_swiper_next material-symbols-outlined">east</button>
+              </nav>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(images/room4.jpg);">
+            <div>
+              <strong>Executive DevPixel Room</strong>
+              <p>
+                <span><i class="material-symbols-outlined">star</i>Delivery service</span>
+                <span><i class="material-symbols-outlined">star</i>Laundry Service</span>
+                <span><i class="material-symbols-outlined">star</i>Tv | <a href="">Read More...</a> </span>
+              </p>
+              <a>
+                <span>Ghc 6,500 <i class="material-symbols-outlined">near_me</i></span>
+                <small>1 in a room</small>
+              </a>
+              <nav>
+                <button class="head_box_swiper_prev material-symbols-outlined">west</button>
+                <button class="head_box_swiper_next material-symbols-outlined">east</button>
+              </nav>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(images/room1.jpg);">
+            <div>
+              <strong>Executive DevPixel Apartment</strong>
+              <p>
+                <span><i class="material-symbols-outlined">star</i>Delivery service</span>
+                <span><i class="material-symbols-outlined">star</i>Laundry Service</span>
+                <span><i class="material-symbols-outlined">star</i>Tv | <a href="">Read More...</a> </span>
+              </p>
+              <a>
+                <span>Ghc 8,500 <i class="material-symbols-outlined">near_me</i></span>
+                <small>1 in a room</small>
+              </a>
+              <nav>
+                <button class="head_box_swiper_prev material-symbols-outlined">west</button>
+                <button class="head_box_swiper_next material-symbols-outlined">east</button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="head_box_swiper_thumb swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div style="background-image: url(images/room11.jpg);"></div>
+          </div>
+          <div class="swiper-slide">
+            <div style="background-image: url(images/room4.jpg);"></div>
+          </div>
+          <div class="swiper-slide">
+            <div style="background-image: url(images/room1.jpg);"></div>
+          </div>
+        </div>
+      </div>
+      <form class="search_form">
+        <div class="input_field">
+          <span>Campus</span>
+          <strong>...</strong>
+          <select name="campus" id="">
+            <option value="...">campus</option>
+            <option value="KNUST">KNUST</option>
+            <option value="UG">UG</option>
+            <option value="UCC">UCC</option>
+          </select>
+        </div>
+        <div class="input_field">
+          <span>Room Type</span>
+          <strong>...</strong>
+          <select name="room_type" id="">
+            <option value="...">room type</option>
+            <option value="3">3 in a Room</option>
+            <option value="2">2 in a Room</option>
+            <option value="1">1 in a Room</option>
+            <option value="Apartment">Apartment</option>
+          </select>
+        </div>
+        <div class="input_field facility_box">
+          <label>
+            Delivery Service
+            <input type="checkbox">
+            <div class="facility_box_check material-symbols-outlined">check</div>
+          </label>
+          <label>
+            Laundry Service
+            <input type="checkbox">
+            <div class="facility_box_check material-symbols-outlined">check</div>
+          </label>
+          <label>
+            Tv with Dstv
+            <input type="checkbox">
+            <div class="facility_box_check material-symbols-outlined">check</div>
+          </label>
+          <label>
+            Air conditioned Room
+            <input type="checkbox">
+            <div class="facility_box_check material-symbols-outlined">check</div>
+          </label>
+        </div>
+
+        <div class="input_field_2">
+          <div>
+            <strong>Ghc <span id="price_num_min">2,000</span></strong>
+            <i class="material-symbols-outlined">arrow_range</i>
+            <strong>Ghc <span id="price_num_max">18,000</span></strong>
+          </div>
+          <div class="price_range">
+            <div class="progress" id="progress"></div>
+            <div class="range_box">
+              <div>
+                <input type="range" id="price_range_min" name="price_min" min="0" max="20000" value="2000">
+                <p></p>
+              </div>
+              <div>
+                <input type="range" id="price_range_max" name="price_min" min="0" max="20000" value="18000">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="material-symbols-outlined">near_me</button>
+      </form>
+    </section>
+    <section class="intro_box" style="background: white;">
+      <div class="intro_box_left">
+        <strong>Welcome To DevPixel Hostels.</strong>
+        <div>
+          <a href="about.html"><i class="material-symbols-outlined">radio_button_checked</i> About</a>
+          <a href=""><i class="material-symbols-outlined">radio_button_checked</i> Extra Services</a>
+          <a href=""><i class="material-symbols-outlined">radio_button_checked</i> + Add a Hostel</a>
+        </div>
+      </div>
+      <div class="intro_box_mid">
+        <div style="background-image: url(images/poly.avif);"></div>
+      </div>
+      <div class="intro_box_right">
+        Welcome to DevPixel Hostels. We are dedicated to providing you with an easy and efficient way to find and book
+        hostels all across the country. Start exploring our site today and discover the perfect hostel for your next
+        adventure!
+      </div>
+    </section>
+
+    <section class="gallery_box">
+      <!-- <nav class="gallery_nav swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <span><i class="material-symbols-outlined">ac_unit</i> KNUST</span>
+          </div>
+          <div class="swiper-slide">
+            <span><i class="material-symbols-outlined">laundry</i> LEGON</span>
+          </div>
+          <div class="swiper-slide">
+            <span><i class="material-symbols-outlined">takeout_dining</i> UCC</span>
+          </div>
+          <div class="swiper-slide">
+            <span><i class="material-symbols-outlined">tv</i> UDS</span>
+          </div>
+          <div class="swiper-slide">
+            <span><i class="material-symbols-outlined">chair_alt</i> study desk</span>
+          </div>
+        </div>
+      </nav> -->
+
+      <div class="gallery_box_swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(images/room8.jpg);">
+            <div href="">
+              <strong>Executive DevPixel Apartment</strong>
+              <p><i class="material-symbols-outlined">ac_unit</i> <i
+                  class="material-symbols-outlined">takeout_dining</i> <i class="material-symbols-outlined">laundry</i>
+              </p>
+              <a href="">
+                <strong>Ghc 9,500</strong>
+                <small>1 in a room</small>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(images/room6.jpg);">
+            <div href="">
+              <strong>Deluxe DevPixel Apartment</strong>
+              <p><i class="material-symbols-outlined">ac_unit</i> <i class="material-symbols-outlined">chair_alt</i></p>
+              <a href="">
+                <strong>Ghc 4,500</strong>
+                <small>3 in a room</small>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(images/room5.jpg);">
+            <div href="">
+              <strong>Twin DevPixel Room</strong>
+              <p><i class="material-symbols-outlined">ac_unit</i> <i class="material-symbols-outlined">laundry</i></p>
+              <a href="">
+                <strong>Ghc 5,500</strong>
+                <small>2 in a room</small>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(images/room3.jpg);">
+            <div href="">
+              <strong>Executive DevPixel Apartment</strong>
+              <p><i class="material-symbols-outlined">ac_unit</i> <i
+                  class="material-symbols-outlined">takeout_dining</i> <i class="material-symbols-outlined">laundry</i>
+              </p>
+              <a href="">
+                <strong>Ghc 9,500</strong>
+                <small>1 in a room</small>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(images/room8.jpg);">
+            <div href="">
+              <strong>Executive DevPixel Apartment</strong>
+              <p><i class="material-symbols-outlined">ac_unit</i> <i
+                  class="material-symbols-outlined">takeout_dining</i> <i class="material-symbols-outlined">laundry</i>
+              </p>
+              <a href="">
+                <strong>Ghc 9,500</strong>
+                <small>1 in a room</small>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(images/room8.jpg);">
+            <div href="">
+              <strong>Executive DevPixel Apartment</strong>
+              <p><i class="material-symbols-outlined">ac_unit</i> <i
+                  class="material-symbols-outlined">takeout_dining</i> <i class="material-symbols-outlined">laundry</i>
+              </p>
+              <a href="">
+                <strong>Ghc 9,500</strong>
+                <small>1 in a room</small>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <header>
+        <h1>dp <i class="material-symbols-outlined">atr</i></h1>
+      </header>
+      <hr>
+      <div class="contact">
+        <a href="tel:0242703070"><i class="material-symbols-outlined">call</i> 0242703070</a>
+        <a href="mailto:tell@hotelipad.com"><i class="material-symbols-outlined">mail</i> tell@hotelipad.com</a>
+      </div>
+      <hr>
+      <div class="con">
+        <div>
+          <a href="rooms.html">View Rooms</a>
+          <a href="add_hostel.html">List your hostel Room</a>
+          <a href="about.html">Learn More</a>
+        </div>
+        <div>
+          <a href="">Hostels in KNUST</a>
+          <a href="">Hostels in UG</a>
+          <a href="">Hostels in UCC</a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script src="js/price.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/anime.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    var head_box_swiper_thumb = new Swiper('.head_box_swiper_thumb', {
+      loop: true,
+      direction: 'vertical',
+      speed: 1500,
+      slidesPerView: 3,
+      freeMode: true,
+      // spaceBetween:10,
+    });
+
+    var head_box_swiper = new Swiper('.head_box_swiper', {
+      loop: true,
+      direction: 'horizontal',
+      speed: 1500,
+      autoplay: {
+        delay: 5000
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      thumbs: {
+        swiper: head_box_swiper_thumb
+      },
+      navigation: {
+        nextEl: '.head_box_swiper_next',
+        prevEl: '.head_box_swiper_prev',
+      },
+    });
+
+    head_box_swiper.el.onmouseover = () => {
+      head_box_swiper.autoplay.stop()
+    }
+    head_box_swiper.el.onmouseleave = () => {
+      head_box_swiper.autoplay.start()
+    }
+
+    head_box_swiper.on('slideNextTransitionStart', () => {
+      [...document.querySelector(".head_box_swiper .swiper-slide-active p").children].forEach((el, ei) => {
+        anime({
+          targets: el,
+          translateY: [-50, 5],
+          opacity: [0, 1],
+          delay: eval(ei + 1) * 400,
+          easing: 'easeInOutQuad',
+          duration: 800,
+        });
+      })
+    })
+
+    window.onload = () => {
+      sessionStorage.clear()
+      var wide = window.innerWidth
+      makeGallerySwiper(wide)
+    }
+    window.onresize = () => {
+      var wide = window.innerWidth
+      makeGallerySwiper(wide)
+    }
+
+    const makeGallerySwiper = (wide) => {
+      // prompt(wide)
+      if (wide > 1600) {
+        var slideNum = 5
+      } else if (wide < 1600 && wide > 1100) {
+        var slideNum = 4
+      } else if (wide < 1100 && wide > 830) {
+        var slideNum = 3
+      } else if (wide < 830 && wide > 530) {
+        var slideNum = 2
+      } else {
+        var slideNum = 1
+      }
+      var gallery_box_swiper = new Swiper('.gallery_box_swiper', {
+        loop: true,
+        slidesPerView: slideNum,
+        autoplay: {
+          delay: 3500
+        },
+        spaceBetween: 20,
+        speed: 1500,
+      });
+
+      gallery_box_swiper.el.onmouseover = () => {
+        gallery_box_swiper.autoplay.stop()
+      }
+      gallery_box_swiper.el.onmouseleave = () => {
+        gallery_box_swiper.autoplay.start()
+      }
+    }
+  </script>
+</body>
+
+</html>

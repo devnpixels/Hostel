@@ -1,0 +1,283 @@
+.page {
+  background: #f4f7fa !important;
+  overflow-x: hidden !important;
+}
+
+.checkout_box {
+  display: flex;
+  padding: 5vh 0;
+  width: 100%;
+  align-items: flex-start;
+  background: transparent;
+  justify-content: space-around;
+}
+
+.image_box {
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.image_box .main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_box .main .i_box {
+  width: 650px;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+}
+
+.image_box .main .hide {
+  display: none;
+}
+
+.image_box .main .i_box::before {
+  content: '';
+  height: 50%;
+  width: 50%;
+  background: #f4f7fa;
+  border-radius: 0 0 15px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image_box .main .i_box div {
+  width: 48%;
+  height: 48%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+}
+
+.image_box .mini {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.image_box .mini .i_box {
+  width: 300px;
+  height: 49%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.stamp_box {
+  width: 330px;
+  padding: 35px 15px;
+  border-radius: 15px;
+  background: skyblue;
+  background: #24282e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  --mask:
+    radial-gradient(7px at 75% 100%, #0000 98%, #000) 50% calc(100% - 7px)/28px 100% repeat-x,
+    radial-gradient(7px at 25% 50%, #000 99%, #0000 101%) bottom/28px 14px repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.stamp_box .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stamp_box .top strong {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.stamp_box .top small {
+  color: #adb0b3;
+  gap: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.stamp_box .mid {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: #adb0b3;
+}
+
+.stamp_box .mid span {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.stamp_box .low strong {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.stamp_box hr {
+  width: 100%;
+  border-top: 2px dotted #adb0b3;
+}
+
+.stamp_box a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.stamp_box a i {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  rotate: -90deg;
+  border: 1px solid #adb0b3;
+  transition: 0.3s ease;
+}
+
+.stamp_box a span {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s ease;
+
+}
+
+.stamp_box a:hover i {
+  rotate: 0deg;
+}
+
+.stamp_box a:hover span {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.info_box {
+  width: 90%;
+  padding: 10px 5%;
+  display: flex;
+}
+
+.info_box .text {
+  width: 70%;
+  text-align: center;
+}
+
+.info_box .tags {
+  display: flex;
+  flex-direction: column;
+  color: #606060;
+  width: 30%;
+  gap: 0.5rem;
+}
+
+.info_box .tags span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+@media all and (max-width:1300px) {
+  .checkout_box {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media all and (max-width:1000px) {
+  .image_box {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .image_box .main .i_box,
+  .image_box .mini .i_box {
+    width: 400px;
+    height: 250px;
+  }
+
+  .image_box .main .i_box::before {
+    background: transparent;
+  }
+
+  .image_box .main {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .image_box .main .hide {
+    display: flex;
+  }
+
+  .image_box .main .i_box div {
+    display: none;
+    position: revert;
+  }
+}
+
+@media all and (max-width:840px) {
+  .image_box {
+    justify-content: center;
+  }
+
+  .image_box .mini {
+    display: none;
+  }
+
+  .info_box {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .info_box .tags,
+  .info_box .text {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width:450px) {
+
+  .image_box,
+  .image_box .main {
+    width: 100%;
+  }
+
+  .image_box .main .i_box {
+    width: 80%;
+    height: 200px;
+  }
+
+  .stamp_box {
+    text-align: center;
+    width: 80%;
+  }
+}

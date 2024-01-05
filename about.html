@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.css"
+    integrity="sha512-DbP1b6q56Ud5q0L+lvw9COyyH/+pN1lVmySvun4UsH8vmfdIHou+PAHfMnGXf6Fvd9rYLjSojeuPhQz2euU1cw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/base.css">
+  
+  <link rel="stylesheet" href="css/about.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <Section id="page">
+    <section class="section " style="background: #d9dadc; background: black; color: white;">
+      <div class="con">
+        <h1>Delivery Services</h1>
+        <p>
+          The delivery service we offer is an added convenience that allows you to have food delivered directly to your
+          accommodation during your stay.
+          Once an order is placed, the delivery service provider will arrange for the items to be delivered to your
+          hostel or accommodation. The delivery can be scheduled for a specific time or as soon as possible, depending
+          on your needs.
+        </p>
+      </div>
+      <hr>
+      <div class="image" style="background-image: url(images/delivery.jpg.png);"></div>
+    </section>
+    <section class="section">
+      <div class="image" style="background-image: url(images/electric-iron-pile-clothes_93675-132157.avif);"></div>
+      <hr>
+      <div class="con">
+        <h1>Laundry Services</h1>
+        <p>
+          Our laundry service is a convenient way for you to keep your clothes clean and fresh during your stay.
+          Once your order is placed, your hostel staff will collect your laundry from your room or a designated area and
+          send it to our local laundry facility. Your laundry will be cleaned according to your instructions and
+          returned to your hostel within a specified time frame.
+        </p>
+      </div>
+    </section>
+    <section class="section " style="background: #d9dadc; background: black; color: white;">
+      <div class="con">
+        <h1>Private Study Station</h1>
+        <p>
+          One of the key features that sets our hostel booking website apart from others is the inclusion of private
+          study stations in each room.
+          Each private study station is equipped with a spacious desk, a comfortable chair, and ample lighting, creating
+          the perfect environment for productivity.
+        </p>
+      </div>
+      <hr>
+      <div class="image" style="background-image: url(images/study.png);"></div>
+    </section>
+    <section class="section " style="background: #d9dadc; background: black; color: white;">
+      <div class="room_swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(images/room1.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(images/room3.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(images/room8.jpg);"></div>
+        </div>
+        <div class="room_swiper_con">
+          <h1>Unique Room Designs</h1>
+          <p>
+            We understand that no two travelers are the same, and so we offer a variety of room options to suit
+            different tastes and preferences.
+            Whether you prefer a minimalist, modern aesthetic or a more traditional, rustic charm, we have a room that
+            will suit your style.
+          </p>
+          <nav>
+            <button type="button" class="material-symbols-outlined room_swiper_prev">west</button>
+            <button type="button" class="material-symbols-outlined room_swiper_next">east</button>
+          </nav>
+          <a href="">View Rooms</a>
+        </div>
+      </div>
+    </section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js"
+      integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      new fullpage('#page', {
+        licenseKey: 'gplv3-license',
+        navigation: true,
+        navigationTooltips: ['Delivery', 'Laundry', 'Study'],
+        autoScrolling: true,
+      });
+    </script>
+    <script>
+      const sections = document.querySelectorAll('.section')
+      const sectionIntersectionObseverOptions = { rootMargin: '-100px' }
+      const sectionIntersectionObsever = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            [...entry.target.children[0].children].forEach(el => {
+              if (el.classList.contains('con')) {
+                console.log(el.children[0])
+                anime({
+                  targets: el.children[0],
+                  translateX: [-50, 0],
+                  opacity: [0, 1],
+                  delay: 200,
+                  duration: 500,
+                });
+                anime({
+                  targets: el.children[1],
+                  translateY: [50, 0],
+                  opacity: [0, 1],
+                  delay: 200,
+                  easing: 'easeInOutQuad',
+                  duration: 500,
+                });
+              }
+            })
+          }
+        })
+      }, sectionIntersectionObseverOptions)
+
+      sections.forEach(section => {
+        sectionIntersectionObsever.observe(section)
+      })
+    </script>
+    <script>
+      var room_swiper = new Swiper('.room_swiper', {
+        loop: true,
+        speed: 1200,
+        autoplay: {
+          delay: 3000
+        },
+        navigation: {
+          nextEl: '.room_swiper_next',
+          prevEl: '.room_swiper_prev',
+        },
+      });
+    </script>
+  </Section>
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/add_hostel.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="page">
+    <nav class="head_nav">
+      <h1>dp <i class="material-symbols-outlined">atr</i></h1>
+      <div>
+        <a href="login.html">Login <span></span></a>
+        <a href="register.html">Register <span></span></a>
+        <a href="add_hostel.html" id="add">+ add a hostel <span></span></a>
+      </div>
+      <button type="button" class="material-symbols-outlined" id="head_nav_tag">navigate_next</button>
+    </nav>
+
+    <section class="head_box">
+      <div class="con">
+        <strong>Collaborate With A-Mole Hostels Today</strong>
+        <p>
+          Looking for an opportunity to make a meaningful impact on the hospitality industry? Look no further than A-Mole Hostels.
+          We specialize in taking ordinary hostel rooms and transforming them into upgraded accommodations that can be rented out at a premium price.
+        </p>
+        <hr>
+        <div>
+          <span>+<i class="material-symbols-outlined">ac_unit</i> Air Conditioned Rooms</span>
+          <span>+<i class="material-symbols-outlined">laundry</i> Laundry Services</span>
+          <span>+<i class="material-symbols-outlined">takeout_dining</i> Delivery Services</span>
+          <span>+<i class="material-symbols-outlined">tv</i> Tv set Rooms</span>
+          <span>+<i class="material-symbols-outlined">chair_alt</i>Private study stations</span>
+          <span>+<i class="material-symbols-outlined">design_services</i>Unique Room Designs</span>
+        </div>
+        <a href=""> <i class="material-symbols-outlined">east</i> </a>
+      </div>
+      <div class="box_holder">
+        <div class="underlay"></div>
+        <div class="box">
+          <div class="mini_1 mini"></div>
+          <div class="mini_2 mini"></div>
+          <a href="" class="p1">
+            <small>over 1000 hostel rooms</small>
+            <i class="material-symbols-outlined">bed</i>
+          </a>
+          <a href="#call_box" class="p2">
+            <small>Get started</small>
+            <i class="material-symbols-outlined" style="color: salmon;">radio_button_checked</i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      anime({
+        targets: '.head_box .con p',
+        translateX: [30, 0],
+        opacity: [0, 1],
+        easing: 'easeInOutQuad',
+        duration: 500,
+      });
+
+      document.querySelectorAll('.head_box .con div span').forEach((el,ei)=>{
+        anime({
+          targets: el,
+          translateY: [30, 0],
+          opacity: [0, 1],
+          easing: 'easeInOutQuad',
+          delay: 120 * ei,
+          duration: 500,
+        });
+      })
+
+      anime({
+        targets: '.mini',
+        translateX: [100, 0],
+        rotate : ['90deg',0],
+        opacity: [0, 1],
+        // easing: 'easeInOutQuad',
+        easing: 'spring(1, 80, 10, 0)',
+        delay: 800,
+        duration: 300,
+      });
+
+      anime({
+        targets: '.box_holder .box a',
+        translateY: [100, 0],
+        opacity: [0, 1],
+        delay: 400,
+        duration: 1500,
+      });
+
+      anime({
+        targets: '.box_holder .box',
+        translateX: [100, 0],
+        opacity: [0, 1],
+        easing: 'spring(1, 80, 10, 0)',
+        duration: 300,
+      });
+
+      anime({
+        targets: '.box_holder .underlay',
+        opacity: [0, 1],
+        scale: [2,1],
+        borderRadius : ['50%','20px'],
+        easing: 'spring(1, 80, 10, 0)',
+        delay:1000,
+        duration: 700,
+      });
+    </script>
+
+
+
+
+    <section class="intro_box">
+      <a href="">Sample Rooms <i class="material-symbols-outlined">hexagon</i></a>
+      <hr>
+      <a href="">Contact us <i class="material-symbols-outlined">hexagon</i></a>
+      <hr>
+      <a href="">Get a call From Us <i class="material-symbols-outlined">hexagon</i></a>
+    </section>
+
+    <section class="call_box" id="call_box">
+      <form action="">
+        <strong>Logo</strong>
+        <div class="input_box">
+          <div class="input_field">
+            <span>Name</span>
+            <input type="text" name="name">
+          </div>
+          <div class="input_field">
+            <span>Contact</span>
+            <input type="text" name="name">
+          </div>
+          <div class="input_field">
+            <span>City</span>
+            <input type="text" name="name">
+          </div>
+        </div>
+        <button type="submit">Request A Call</button>
+      </form>
+    </section>  
+    <section class="footer">
+      <header>LOGO</header>
+      <hr>
+      <div class="contact">
+        <a href="tel:0242703070"><i class="material-symbols-outlined">call</i> 0242703070</a> 
+        <a href="mailto:tell@hotelipad.com"><i class="material-symbols-outlined">mail</i> tell@hotelipad.com</a> 
+      </div>
+      <hr>
+      <div class="con">
+        <div>
+          <a href="rooms.html">View Rooms</a>
+          <a href="add_hostel.html">List your hostel Room</a>
+          <a href="about.html">Learn More</a>
+        </div>
+        <div>
+          <a href="">Hostels in KNUST</a>
+          <a href="">Hostels in UG</a>
+          <a href="">Hostels in UCC</a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

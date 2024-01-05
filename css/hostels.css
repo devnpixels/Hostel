@@ -1,0 +1,111 @@
+.facilities i {
+  border: 1px solid wheat;
+  font-size: 2rem;
+  color: wheat;
+  border-radius: 3px;
+}
+
+.room_box {
+  width: 90%;
+  padding: 2vh 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.room_box h3 {
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 300;
+  font-size: 2rem;
+  border-bottom: 2px dotted darkgray;
+}
+
+.room_box .holder {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.head_box {
+  min-height: 50vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.head_box .cover {
+  width: 90%;
+  padding: 5vh 5%;
+  min-height: 40vh;
+  background: rgba(0, 0, 0, 0.477);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head_box .cover .con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem 0;
+  width: 60%;
+}
+
+
+
+.head_box p {
+  color: white;
+  text-align: center;
+}
+
+.head_box h3 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.head_box .info {
+  display: flex;
+  gap: 0 4vw;
+}
+
+.head_box .info p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.head_box .info p span {
+  display: flex;
+  align-items: center;
+  gap: 0 0.3rem;
+  font-size: 1.8rem;
+}
+
+.head_box .info p small {
+  font-size: 1rem;
+}
+
+
+@media all and (max-width:1000px){
+  .head_box .cover .con{
+    width: 95%;
+  }
+}
+@media all and (max-width:600px){
+  .head_box h3{
+    font-size: 8vw;
+  }
+  .head_box .info{
+    gap: revert;
+    align-items: center;
+    gap: 1rem 0;
+    flex-direction: column;
+  }
+  .head_box .info p{
+    align-items: center;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="page">
+    <nav class="head_nav">
+      <span>Logo</span>
+      <div>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="add_hostel.html" id="add">+ add a hostel</a>
+        <i class="material-symbols-outlined">notifications</i>
+      </div>
+      <button type="button" class="material-symbols-outlined" id="head_nav_tag">navigate_next</button>
+    </nav>
+    <section class="checkout_box">
+      <div class="image_box">
+        <div class="main">
+          <div class="i_box" style="background-image: url(images/room8.jpg);">
+            <div style="background-image: url(images/room1.jpg);"></div>
+          </div>
+          <div class="i_box hide" style="background-image: url(images/room4.jpg);"></div>
+        </div>
+        <div class="mini">
+          <div class="i_box" style="background-image: url(images/room4.jpg);"></div>
+          <div class="i_box" style="background-image: url(images/room5.jpg);"></div>
+        </div>
+      </div>
+      <div class="stamp_box">
+        <div class="top">
+          <strong>A-mole Room 3B</strong>
+          <small><i class="material-symbols-outlined">my_location</i>Ayeduase Gate, KNUST</small>
+        </div>
+        <hr>
+        <div class="mid">
+          <span>2 in a Room</span>
+          <span>+ <i class="material-symbols-outlined">laundry</i> Laundry Service</span>
+          <span>+ <i class="material-symbols-outlined">package</i> Delivery Service</span>
+        </div>
+        <hr>
+        <div class="low">
+          <strong>Ghc 7,500</strong>
+          <small>per year</small>
+        </div>
+        <a href="">
+          <i class="material-symbols-outlined">south</i>
+          <span>Book now</span>
+        </a>
+      </div>
+    </section>
+    <section class="info_box">
+      <div class="tags">
+        <span> <i class="material-symbols-outlined">tv</i> Tv set</span>
+        <span> <i class="material-symbols-outlined">chair_alt</i> Private study station</span>
+        <span> <i class="material-symbols-outlined">ac_unit</i> Air conditioner</span>
+      </div>
+      <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos provident animi quis voluptas ab assumenda. Incidunt praesentium fuga tempore veniam error explicabo, suscipit voluptates cum temporibus earum ipsam exercitationem ea! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quaerat odio culpa amet. Inventore harum possimus placeat aperiam libero iusto sed deleniti magnam quos voluptatibus repellat sunt fugit, accusamus vitae.</div>
+    </section>
+  </section>
+  <section class="footer">
+    <header>LOGO</header>
+    <hr>
+    <div class="contact">
+      <a href="tel:0242703070"><i class="material-symbols-outlined">call</i> 0242703070</a> 
+      <a href="mailto:tell@hotelipad.com"><i class="material-symbols-outlined">mail</i> tell@hotelipad.com</a> 
+    </div>
+    <hr>
+    <div class="con">
+      <div>
+        <a href="rooms.html">View Rooms</a>
+        <a href="add_hostel.html">List your hostel Room</a>
+        <a href="about.html">Learn More</a>
+      </div>
+      <div>
+        <a href="">Hostels in KNUST</a>
+        <a href="">Hostels in UG</a>
+        <a href="">Hostels in UCC</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+  integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+
+    anime({
+      targets : '.stamp_box',
+      translateY : [100, 0],
+      opacity : [0,1],
+      duration : 2000,
+    })
+
+    document.querySelectorAll('.tags span').forEach((el,i)=>{
+      anime({
+        targets : el,
+        translateX : [-100, 0],
+        opacity : [0,1],
+        delay : i * 200,
+        easing : 'easeInOutQuad',
+        duration : 500,
+      })
+    })
+
+  </script>
+
+</body>
+</html>

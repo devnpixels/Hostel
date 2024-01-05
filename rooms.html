@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/searchForm.css">
+  <link rel="stylesheet" href="css/rooms.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <nav class="head_nav">
+      <span>Logo</span>
+      <div>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="add_hostel.html" id="add">+ add a hostel</a>
+        <i class="material-symbols-outlined">notifications</i>
+      </div>
+    </nav>
+
+    <section class="head_box">
+      <form class="search_form">
+        <div class="input_field">
+          <span>Campus</span>
+          <strong>...</strong>
+          <select name="campus" id="">
+            <option value="...">campus</option>
+            <option value="KNUST">KNUST</option>
+            <option value="UG">UG</option>
+            <option value="UCC">UCC</option>
+          </select>
+        </div>
+        <div class="input_field">
+          <span>Room Type</span>
+          <strong>...</strong>
+          <select name="room_type" id="">
+            <option value="...">room type</option>
+            <option value="3">3 in a Room</option>
+            <option value="2">2 in a Room</option>
+            <option value="1">1 in a Room</option>
+            <option value="Apartment">Apartment</option>
+          </select>
+        </div>
+        <div class="input_field facility_box">
+          <label>
+            Delivery Service
+            <input type="checkbox" value="Delivery Service">
+            <div class="facility_box_check material-symbols-outlined">check</div>
+          </label>
+          <label>
+            Laundry Service
+            <input type="checkbox" value="Laundry Service">
+            <div class="facility_box_check material-symbols-outlined">check</div>
+          </label>
+          <label>
+            Tv
+            <input type="checkbox" value="Tv">
+            <div class="facility_box_check material-symbols-outlined">check</div>
+          </label>
+          <label>
+            Air conditioned Room
+            <input type="checkbox" value="Air conditioned Room">
+            <div class="facility_box_check material-symbols-outlined">check</div>
+          </label>
+        </div>
+
+        <div class="input_field_2">
+          <div>
+            <strong>Ghc <span id="price_num_min">2,000</span></strong>
+            <i class="material-symbols-outlined">arrow_range</i>
+            <strong>Ghc <span id="price_num_max">18,000</span></strong>
+          </div>
+          <div class="price_range">
+            <div class="progress" id="progress"></div>
+            <div class="range_box">
+              <div>
+                <input type="range" id="price_range_min" name="price_min" min="0" max="20000" value="2000">
+                <p></p>
+              </div>
+              <div>
+                <input type="range" id="price_range_max" name="price_max" min="0" max="20000" value="18000">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="material-symbols-outlined">near_me</button>
+        <div id="search_tag" class="material-symbols-outlined">search</div>
+      </form>
+    </section>
+    <section class="room_box">
+      <!-- <section class="room_show">
+
+      </section> -->
+
+      <!-- <style>
+        .room_show{
+          position: fixed;
+          top: 15vh;
+          left: 0;
+          background: skyblue;
+          z-index: 5;
+          display: flex;
+          justify-content: center;
+        }
+      </style> -->
+
+      <div class="room_li" data-campus="knust" data-type="1" data-price="7500">
+        <div class="extra">
+          <div class="top_image" style="background-image: url(images/room11.jpg);"></div>
+          <div class="low_image_box">
+            <div class="low_image" style="background-image: url(images/room11.jpg);"></div>
+            <div class="low_image" style="background-image: url(images/room11.jpg);"></div>
+          </div>
+        </div>
+        <div class="room">
+          <i id="bookmark" class="material-symbols-outlined">bookmark</i>
+          <strong>Ghc 7,500/Year </strong>
+          <span><i class="material-symbols-outlined">location_on</i> Ayeduase Gate, KNUST</span>
+          <div class="image_box" style="background-image: url(images/room1.jpg);"><span>1 in a room</span></div>
+          <p> nemo aliquam ad in nesciunt tenetur veritatis architecto, nesciunt tenetur veritatis architecto, est
+            necessitatibus amet quis?</p>
+          <span id="type">1 in a room</span>
+          <div class="tag_box">
+            <div> <i class="material-symbols-outlined">ac_unit</i> <small>Air condition</small></div>
+            <div> <i class="material-symbols-outlined">chair_alt</i><small>study Station</small></div>
+            <div> <i class="material-symbols-outlined">laundry</i><small>Laundry Services</small></div>
+          </div>
+          <a href="">Get Now</a>
+        </div>
+      </div>
+      <div class="room_li" data-campus="ug" data-type="3" data-price="3000">
+        <div class="extra">
+          <div class="top_image" style="background-image: url(images/room3.jpg);"></div>
+          <div class="low_image_box">
+            <div class="low_image" style="background-image: url(images/room11.jpg);"></div>
+            <div class="low_image" style="background-image: url(images/room11.jpg);"></div>
+          </div>
+        </div>
+        <div class="room">
+          <i id="bookmark" class="material-symbols-outlined">bookmark</i>
+          <strong>Ghc 3,000/Year </strong>
+          <span><i class="material-symbols-outlined">location_on</i> Atomic Gate, UG</span>
+
+          <div class="image_box" style="background-image: url(images/room3.jpg);"><span>3 in a room</span></div>
+          <p> nemo aliquam ad in nesciunt tenetur veritatis architecto, nesciunt tenetur veritatis architecto, est
+            necessitatibus amet quis?</p>
+          <span id="type">3 in a room</span>
+          <div class="tag_box">
+            <div> <i class="material-symbols-outlined">ac_unit</i> <small>Air condition</small></div>
+            <div> <i class="material-symbols-outlined">chair_alt</i><small>study Station</small></div>
+            <div> <i class="material-symbols-outlined">laundry</i><small>Laundry Services</small></div>
+          </div>
+          <a href="">Get Now</a>
+        </div>
+      </div>
+      <div class="room_li" data-campus="ucc" data-type="2" data-price="3000">
+        <div class="extra">
+          <div class="top_image" style="background-image: url(images/room3.jpg);"></div>
+          <div class="low_image_box">
+            <div class="low_image" style="background-image: url(images/room11.jpg);"></div>
+            <div class="low_image" style="background-image: url(images/room11.jpg);"></div>
+          </div>
+        </div>
+        <div class="room">
+          <i id="bookmark" class="material-symbols-outlined">bookmark</i>
+          <strong>Ghc 3,000/Year </strong>
+          <span><i class="material-symbols-outlined">location_on</i> Atomic Gate, UCC</span>
+          <div class="image_box" style="background-image: url(images/room3.jpg);"><span>2 in a room</span></div>
+          <p> nemo aliquam ad in nesciunt tenetur veritatis architecto, nesciunt tenetur veritatis architecto, est
+            necessitatibus amet quis?</p>
+          <span id="type">2 in a room</span>
+          <div class="tag_box">
+            <div> <i class="material-symbols-outlined">ac_unit</i> <small>Air condition</small></div>
+            <div> <i class="material-symbols-outlined">chair_alt</i><small>study Station</small></div>
+            <div> <i class="material-symbols-outlined">laundry</i><small>Laundry Services</small></div>
+          </div>
+          <a href="">Get Now</a>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- <script src="js/rooms.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const room_box = document.querySelector('.room_box')
+    const room_show = document.querySelector('.room_show')
+    for (var i = 0; i < 3; i++) {
+      var roomLiClone = document.querySelectorAll('.room_li')[0].cloneNode(true)
+      room_box.appendChild(roomLiClone)
+    }
+    for (var i = 0; i < 5; i++) {
+      var roomLiClone = document.querySelectorAll('.room_li')[1].cloneNode(true)
+      room_box.appendChild(roomLiClone)
+    }
+    for (var i = 0; i < 2; i++) {
+      var roomLiClone = document.querySelectorAll('.room_li')[2].cloneNode(true)
+      room_box.appendChild(roomLiClone)
+    }
+
+
+    const room_lis = document.querySelectorAll('.room_li')
+    room_lis.forEach((el,i) => {
+      el.onclick = () => {
+        handlePositions(el,parseInt(i+1))
+        if (el.classList.contains('change')) {
+          el.classList.remove('change')
+          room_box.classList.remove('change')
+        } else {
+          room_lis.forEach(el => {
+            el.classList.remove('change')
+          })
+          el.classList.toggle('change')
+          room_box.classList.add('change')
+          // el.tabIndex = -1;
+          // el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+          // el.focus()
+        }
+      }
+    })
+
+    const handlePositions =(el,i)=>{
+      var wide = room_box.clientWidth
+      var roomsPerRow = Math.floor(wide / el.clientWidth)
+      var minusFactor = (roomsPerRow - Math.floor(roomsPerRow/2)) + 2
+      var addFactor = 1
+      console.log(i)
+      //last on row
+      if(i % roomsPerRow === 0){
+        if(el.classList.contains('change')){
+          room_box.insertBefore(el, room_lis[i]);
+          el.style.backgroundColor = 'skyblue';
+          // el.classList.add('change')
+          
+        }else {
+          room_lis.forEach(el => {
+            el.classList.remove('change')
+            el.style.backgroundColor = 'skyblue';
+          })
+          room_box.insertBefore(el, room_lis[i-minusFactor]);
+          el.classList.toggle('change')
+          room_box.classList.add('change')
+          el.style.backgroundColor = 'salmon'
+          // el.tabIndex = -1;
+          // el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+          // el.focus()
+        }
+      }
+      
+    }
+
+  </script>
+  <script src="js/price.js"></script>
+</body>
+
+</html>
+
+<script>
+  const search_tag = document.getElementById('search_tag')
+  const search_form = document.querySelector('.search_form')
+  search_tag.onclick = () => {
+    search_form.classList.toggle('change')
+  }
+
+  
+
+  const animeRoom_li = () => {
+    room_lis.forEach((el, ei) => {
+      anime({
+        targets: el,
+        duration: 300,
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        delay: ei * 50,
+        easing: 'spring(1, 80, 10, 0)'
+      })
+    })
+  }
+  animeRoom_li()
+  const animeRoom_li_2 = () => {
+    room_lis.forEach((el, ei) => {
+      anime({
+        targets: el,
+        duration: 200,
+        translateX: [-50, 0],
+        opacity: [0, 1],
+        delay: ei * 50,
+        // easing : 'easeInOutExpo'
+        easing: 'spring(1, 50, 10, 0)'
+      })
+    })
+  }
+</script>
+
+<script>
+  const form_in = document.querySelectorAll('form select')
+  const form_out = document.querySelectorAll('form .input_field strong')
+  const price_in = document.querySelectorAll('.input_field_2 input')
+
+  for (let i = 0; i < form_in.length; i++) {
+    form_in[i].onchange = () => {
+      form_out[i].innerHTML = form_in[i].value
+      roomSearch()
+    }
+    price_in[i].onchange = () => {
+      roomSearch()
+    }
+  }
+
+  const campus_input = document.querySelector('.search_form select[name="campus"]')
+  const campus_in = document.querySelector('.search_form select[name="campus"]')
+  const roomType_in = document.querySelector('.search_form select[name="room_type"]')
+  const checkboxes = document.querySelectorAll('.facility_box input')
+
+  const roomSearch = () => {
+    let params = {}
+    form_in.forEach(el => {
+      if (el.value != '...') {
+        if (el.name === 'campus') {
+          params.campus = el.value
+        } else {
+          params.type = el.value
+        }
+      }
+    })
+    price_in.forEach(el => {
+      if (el.name === 'price_min') {
+        params.price_min = el.value
+      } else {
+        params.price_max = el.value
+      }
+    })
+    runSearch(params)
+  }
+
+  const runSearch = (params) => {
+    console.log(params)
+
+    if (params.campus && !params.type) {
+      oneParams(params)
+    } else if (params.type && !params.campus) {
+      oneParams(params)
+    }
+    else if (params.campus && params.type) {
+      twoParams(params)
+    }
+    else if (params.price_min && !params.campus && !params.type) {
+      oneParams(params)
+    }
+    else if (params.campus && params.type && params.price_min) {
+      twoParams(params)
+    }
+    animeRoom_li_2()
+  }
+
+  const oneParams = (params) => {
+    if (params.campus) {
+      room_lis.forEach(el => {
+        handleFilter_1(params.campus.toLowerCase(), el.dataset.campus.toLowerCase(), el)
+      })
+    } else if (params.type) {
+      room_lis.forEach(el => {
+        handleFilter_1(params.type.toLowerCase(), el.dataset.type.toLowerCase(), el)
+      })
+    } else if (params.price_min && params.price_max) {
+      room_lis.forEach(el => {
+        handlePrice_1(params, el)
+      })
+    }
+  }
+
+  const twoParams = (params) => {
+    if (params.campus && params.type) {
+      room_lis.forEach(el => {
+        handleFilter_1(params.campus.toLowerCase(), el.dataset.campus.toLowerCase(), el)
+      })
+      handleFilter_2(params)
+    }
+    if (params.campus && params.type && params.price_min) {
+      room_lis.forEach(el => {
+        handleFilter_1(params.campus.toLowerCase(), el.dataset.campus.toLowerCase(), el)
+      })
+      handleFilter_2(params)
+      handleFilter_3(params)
+    }
+  }
+
+  const handleFilter_1 = (param, el_data, el) => {
+    if (param != el_data) {
+      el.style.display = 'none'
+    } else {
+      el.style.display = 'flex'
+    }
+  }
+
+  const handleFilter_2 = (params) => {
+    roomsLeft = []
+    room_lis.forEach(el => {
+      if (el.style.display === 'flex') {
+        roomsLeft.push(el)
+      }
+    })
+    roomsLeft.forEach(el => {
+      handleFilter_1(params.type.toLowerCase(), el.dataset.type.toLowerCase(), el)
+    })
+  }
+
+  const handleFilter_3 = (params) => {
+    roomsLeft = []
+    room_lis.forEach(el => {
+      if (el.style.display === 'flex') {
+        roomsLeft.push(el)
+      }
+    })
+    roomsLeft.forEach(el => {
+      handlePrice_1(params, el)
+    })
+  }
+
+
+  const handlePrice_1 = (params, el) => {
+    var el_price = parseInt(el.dataset.price)
+    if (el_price > params.price_min && el_price < params.price_max) {
+      el.style.display = 'flex'
+    } else {
+      el.style.display = 'none'
+    }
+  }
+
+</script>
+
+<script>
+// checkboxes.forEach(el=>{
+//   checkList = []
+//   el.onchange =()=>{
+//     if(el.checked){
+//       checkList.push(el.value)
+//     }else{
+//       checkList.pop(el.value)
+//     }
+//     console.log(checkList)
+//   }
+// })
+</script>

@@ -1,0 +1,170 @@
+.head_box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room_box{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  width: 95%;
+  justify-content: space-around;
+  position: relative;
+  gap: 1.5rem 0;
+  /* gap: 27.7px; */
+}
+.room_li{
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+.room{
+  width: 320px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;       
+  transition: 0.3s ease;
+  align-items: flex-start;
+  position: relative;
+}
+.room p{
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.room #bookmark{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.room .image_box{
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-radius: 7px;
+  height: 230px;
+}
+.room .image_box span{
+  position: absolute;
+  padding: 3px;
+  bottom: 10px;
+  right: 5px;
+  color: salmon;
+  border-radius: 0 0 5px 0px;
+}
+.room #type{
+  display: none;
+}
+.room a{
+  display: none;
+}
+.room strong{
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.room span{
+  display: flex;
+  gap: 0.3rem;
+  color: rgb(103, 103, 103);
+  align-items: center;
+}
+
+.room .tag_box{
+  display: flex;
+  align-items: center;
+  color: salmon;
+  /* border: 1px solid black; */
+}
+.room .tag_box div small{
+  display: none;
+}
+.extra{  
+  display: flex;
+  width: 0;
+  gap: 0.5rem;
+  transition: 0.5s ease;
+  flex-direction: column;
+  align-items: center;
+}
+.extra div{
+  display: none;
+}
+.extra .top_image{
+  width: 100%;
+  height: 245px;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+}
+.extra .low_image_box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.extra .low_image{
+  width: 48%;
+  height: 150px;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+}
+
+.room_li.change{
+  width: 100%;
+  justify-content: center;
+  gap: 0 2rem;
+}
+.room_li.change .room .image_box{
+  display: none;
+}
+.room_li.change .room .tag_box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3rem;
+}
+.room_li.change .room .tag_box div small{
+  display: flex;
+}
+.room_li.change .room #type{
+  display: flex;
+  font-weight: 600;
+  border-bottom: 1px dotted darkgray;
+}
+.room_li.change .room p{
+  display: flex;
+}
+.room_li.change .room a{
+  display: flex;
+  background: palevioletred;
+  color: white;
+  padding: 6px;
+  border-radius: 3px;
+}
+.room_li.change .extra{
+  padding: 10px;
+  width: 320px;
+}
+.room_li.change .extra div{
+  display: flex;
+}
+
+@media all and (max-width:1300px){
+  .room_box{
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width:750px){
+  .room_li{
+    flex-direction: column;
+  }
+}
